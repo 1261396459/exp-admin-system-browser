@@ -1,21 +1,50 @@
+// 这个样式表用于全局混合并规定了一些默认属性值
 @PageColor: #FBFBFB; //页面背景
 @ContentColor: #FFFFFF; //内容背景
 @ItemContentColor: #FFFFFF; //分块内容背景
 @themeLightColor: #ECF5FF; //主题浅色
 @themeDarkColor: #409EFF; //主题深色
+
+@fontLightColor: #FFFFFF; //字体浅色
+@fontDarkColor: #000000; //字体深色
+@fontHintColor: #707070; //字体中间色
+
+@iconSize: 24px; //icon默认大小
 @TopBtmGapping: 15px;
-@baseMargin: 8px;
+@baseMargin: 10px; //默认text间距
 @normalTextFont: 14px;
 @smallFont: 16px;
 @mediumFont: 20px;
 @bigFont: 24px;
-
 .aboundContainer {
   // 充满容器
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.page {
-  .aboundContainer();
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexRowHorBetween {
+  .flexRow();
+  justify-content: space-between;
+}
+
+.flexRowVerCenter {
+  .flexRow();
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexColHorCenter {
+  .flexCol();
+  align-items: center;
 }

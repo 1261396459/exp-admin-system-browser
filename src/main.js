@@ -5,6 +5,7 @@ import store from './store'
 import ElementPlus from 'element-plus';
 import 'element-plus/lib/theme-chalk/index.css';
 import {Back, Close, Check} from '@element-plus/icons';
+import '@/assets/fit.less'
 
 const Vue = createApp(App)
 Vue.use(store).use(router)
