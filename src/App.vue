@@ -20,6 +20,14 @@
     height: @footerHeight; width: 100%;
     z-index: 0;
   }
+  .footer-text {
+    .flexColHorCenter();
+    text-decoration: none;
+    font-weight: bold;
+    font-family: "PingFang SC";
+    color: @themeDarkColor;
+    font-size: @smallFont;
+  }
   .fit-text-margin {
     margin-top: @baseMargin;
   }

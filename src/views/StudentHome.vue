@@ -1,9 +1,9 @@
 <template>
   <el-container class="page">
     <el-header>
-      <el-icon-back class="el-icon"/>
+      <div class="el-icon"/>
       <p>{{ $route.name }}</p>
-      <el-icon-check class="el-icon"/>
+      <div class="el-icon"/>
     </el-header>
     <div class="header"></div>
     <el-main>
@@ -11,12 +11,18 @@
     </el-main>
     <div class="footer"></div>
     <el-footer>
-      <router-link to="course" append replace>
-        <el-icon-calendar class="el-icon" />
-      </router-link>
-      <router-link to="sign" append replace>
-        <el-icon-checked class="el-icon" />
-      </router-link>
+      <div class="footer-text">
+        <router-link to="course" append replace>
+          <el-icon-calendar class="el-icon"/>
+        </router-link>   
+        <span>实验课程</span>
+      </div>
+      <div class="footer-text">
+        <router-link to="sign" append replace>
+          <el-icon-checked class="el-icon"/>        
+        </router-link> 
+        <span>我的签到</span>
+      </div>
     </el-footer>
   </el-container>
 </template>
@@ -37,6 +43,4 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
-
-</style>
+<style scoped lang="less"></style>
