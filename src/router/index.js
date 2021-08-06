@@ -26,6 +26,26 @@ const routes = [
       },
     ]
   },
+  {
+    path: '/adminer',    
+    component: () => import('@/views/AdminerHome.vue'),
+    children: [
+      {
+        path: "",
+        redirect: "/adminer/lab"
+      },
+      {
+        path: "lab",
+        name: '我的实验室',
+        component: () => import('@/views/Adminer/Lab.vue')
+      },
+      {
+        path: "app",
+        name: '我的收到的申请',
+        component: () => import('@/views/Adminer/Application.vue')
+      },
+    ]
+  },
 ]
 
 const router = createRouter({

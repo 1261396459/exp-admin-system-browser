@@ -50,7 +50,7 @@ export default {
     toEnter(level) {
       switch(level) {
         case '2':
-          this.$router.replace('/')
+          this.$router.replace('/adminer')
           break
         case '3':
           this.$router.replace('/')
