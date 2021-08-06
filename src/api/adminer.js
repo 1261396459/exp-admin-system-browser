@@ -28,19 +28,15 @@ export default {
   
   changeLabNum(lab, number){
     return Client.put(api+'/upd-lab-number',{
-      params: {
-        lab,
-        number
-      }
+      lab,
+      number
     })
   },
   
   delSC(lab, eid){
     return Client.delete(api+'/del-lab-course',{
-      params: {
-        lab,
-        eid
-      }
+      lab,
+      eid
     })
   },
   
@@ -61,18 +57,14 @@ export default {
   
   agree(apid){
     return Client.put(api+'/agree-application',{
-      params: {
-        apid
-      }
+      apid
     })
   },
   
   disagree(apid, comment){
     return Client.put(api+'/disagree-application',{
-      params: {
-        apid,
-        comment
-      }
+      apid,
+      comment
     })
   },
 }
