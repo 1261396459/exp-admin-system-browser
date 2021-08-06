@@ -1,8 +1,29 @@
 // 这个样式表用于覆盖element的全局样式
 .el-header {
-  height: 45px; width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: @headerHeight; width: 100%;
   background-color: @themeDarkColor;
+  z-index: 10;
   .flexRowHorBetween();
+  .flexRowVerCenter();
+}
+
+.el-main {
+  background-color: @PageColor;
+  .aboundContainer();
+  .flexColHorCenter();
+}
+
+.el-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: @footerHeight; width: 100%;
+  background-color: @ContentColor;
+  z-index: 10;
+  .flexRowHorAround();
   .flexRowVerCenter();
 }
 

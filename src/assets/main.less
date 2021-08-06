@@ -9,6 +9,10 @@
 @fontDarkColor: #000000; //字体深色
 @fontHintColor: #707070; //字体中间色
 
+@headerHeight: 45px; //header高度
+@footerHeight: 63px; //footer高度
+@itemMarginHeight: 12px; //item间距
+
 @iconSize: 24px; //icon默认大小
 @TopBtmGapping: 15px;
 @baseMargin: 10px; //默认text间距
@@ -32,6 +36,11 @@
 .flexRowHorBetween {
   .flexRow();
   justify-content: space-between;
+}
+
+.flexRowHorAround {
+  .flexRow();
+  justify-content: space-around;
 }
 
 .flexRowVerCenter {

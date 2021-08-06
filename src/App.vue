@@ -9,7 +9,16 @@
   }  
   // body
   .page {
+    background-color: @PageColor;
     .aboundContainer();
+  }
+  .header {
+    height: @headerHeight; width: 100%;
+    z-index: 0;
+  }
+  .footer {
+    height: @footerHeight; width: 100%;
+    z-index: 0;
   }
   .fit-text-margin {
     margin-top: @baseMargin;
