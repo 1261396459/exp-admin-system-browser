@@ -53,7 +53,7 @@ export default {
           this.$router.replace('/adminer')
           break
         case '3':
-          this.$router.replace('/')
+          this.$router.replace('/teacher')
           break
         case '9':
           this.$router.replace('/student')
