@@ -1,10 +1,11 @@
 <template>
   <el-container class="page">
-    <el-header class="head">
+    <el-header class="header">
       <el-icon-back class="el-icon"/>
       <p>{{ $route.name }}</p>
       <el-icon-check class="el-icon"/>
     </el-header>
+    <div class="header"></div>
     <el-main class="main">
       <img class="logo" src="../assets/logo.png"/>
       <div class="fit-text-margin input">
@@ -32,13 +33,35 @@ export default {
   methods: {
     async _login(){
       const res = await User.login(this.acc, this.pass)
-      const rm = res.data
-      console.log(rm)
-      if(rm.length == 0){
-        this.$message.warning('账号或密码错误')
+      console.log(res)
+      if(res.status == 200){
+        const rm = res.data[0]
+        this.$store.commit("LOGIN", {
+          uid: rm.BELONG,
+          acc: this.acc,
+          level: rm.POWER
+        })
+        this.$message.success('登录成功')
+        this.toEnter(rm.POWER)
         return ;
       }
-      this.$message.success('登录成功') 
+      this.$message.warning('账号或密码错误')
+    },
+    toEnter(level) {
+      switch(level) {
+        case '2':
+          this.$router.replace('/')
+          break
+        case '3':
+          this.$router.replace('/')
+          break
+        case '9':
+          this.$router.replace('/student')
+          break
+        default:
+          console.warn('无该权限信息')
+          break
+      }
     }
   },
   mounted() {
@@ -48,9 +71,6 @@ export default {
 </script>
 
 <style scoped lang="less">
-.main {
-  .flexColHorCenter();
-}
 .logo {
   height: 234px;
 }
