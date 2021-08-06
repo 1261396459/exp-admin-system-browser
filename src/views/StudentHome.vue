@@ -11,8 +11,12 @@
     </el-main>
     <div class="footer"></div>
     <el-footer>
-      <el-icon-calendar class="el-icon"/>
-      <el-icon-checked class="el-icon"/>
+      <router-link to="course" append replace>
+        <el-icon-calendar class="el-icon" />
+      </router-link>
+      <router-link to="sign" append replace>
+        <el-icon-checked class="el-icon" />
+      </router-link>
     </el-footer>
   </el-container>
 </template>

@@ -18,7 +18,12 @@ const routes = [
         path: "course",
         name: '我的实验课',
         component: () => import('@/views/Student/Course.vue')
-      }
+      },
+      {
+        path: "sign",
+        name: '我的签到',
+        component: () => import('@/views/Student/Signin.vue')
+      },
     ]
   },
 ]
