@@ -7,7 +7,7 @@
     </el-header>
     <div class="header"></div>
     <el-main>
-     <router-view class="page"/>
+      <router-view class="page"/>
     </el-main>
     <div class="footer"></div>
     <el-footer>
