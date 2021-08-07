@@ -80,6 +80,11 @@ const routes = [
     path: '/teacher/set-exp',
     name: '修改实验课信息',
     component: () => import('@/views/Teacher/AlertExp.vue')
+  },
+  {
+    path: '/teacher/set-apply',
+    name: '发起申请',
+    component: () => import('@/views/Teacher/SetApply.vue')
   }
 ]
 
