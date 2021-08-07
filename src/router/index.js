@@ -61,7 +61,7 @@ const routes = [
       },
       {
         path: "big",
-        name: '我的实验课',
+        name: '实验课管理',
         component: () => import('@/views/Teacher/Big.vue')
       },
       {
