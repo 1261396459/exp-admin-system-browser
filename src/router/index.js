@@ -70,6 +70,11 @@ const routes = [
         component: () => import('@/views/Teacher/Apply.vue')
       },
     ]
+  },
+  {
+    path: '/teacher/small',
+    name: '实验课具体课程',
+    component: () => import('@/views/Teacher/Small.vue')
   }
 ]
 
