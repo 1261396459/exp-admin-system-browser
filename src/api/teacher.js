@@ -26,6 +26,14 @@ export default {
     })
   },
   
+  getClass(cid){
+    return Client.get(api+'/can-big-class',{
+      params: {
+        cid
+      }
+    })
+  },
+  
   alertBig(id, number){
     return Client.put(api+'/to-big',{
       id,

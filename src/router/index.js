@@ -75,6 +75,11 @@ const routes = [
     path: '/teacher/small',
     name: '实验课具体课程',
     component: () => import('@/views/Teacher/Small.vue')
+  },
+  {
+    path: '/teacher/set-exp',
+    name: '修改实验课信息',
+    component: () => import('@/views/Teacher/AlertExp.vue')
   }
 ]
 
