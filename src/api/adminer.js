@@ -35,8 +35,10 @@ export default {
   
   delSC(lab, eid){
     return Client.delete(api+'/del-lab-course',{
-      lab,
-      eid
+      params: {
+        lab,
+        eid
+      }
     })
   },
   

@@ -1,5 +1,5 @@
 <template>
-  <el-card class="box-card" v-for="item,index in list" :key="index">
+  <el-card class="box-card" v-for="item,index in list" :key="index" @click="gotoAlert(item.LNAME,item.SPN)">
     <el-descriptions :column="1" direction="horizontal">
       <el-descriptions-item label="实验室名">{{ item.LNAME }}</el-descriptions-item>
       <el-descriptions-item label="容纳人数">{{ item.SPN }}</el-descriptions-item>
@@ -29,6 +29,16 @@ export default {
       }
       this.$message.warning('无管理的实验室')
     },
+    gotoAlert(lname,lnum) {
+      console.log('lab',lname)
+      this.$router.push({ 
+        path: '/adminer/lab-change', 
+        query: { 
+          lname,
+          lnum
+        }
+      })
+    }
   },
   mounted() {
     this._initList()
@@ -43,7 +53,7 @@ export default {
     margin-top: @itemMarginHeight;
   }
   .supc {
-    width: 50%;
+    width: 80%;
     word-wrap: break-word; 
   }
 </style>

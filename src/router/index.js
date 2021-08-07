@@ -46,6 +46,11 @@ const routes = [
       },
     ]
   },
+  {
+    path: '/adminer/lab-change',
+    name: '修改实验室信息',
+    component: () => import('@/views/Adminer/AlertLab.vue')
+  }
 ]
 
 const router = createRouter({
