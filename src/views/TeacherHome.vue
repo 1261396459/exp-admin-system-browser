@@ -1,13 +1,13 @@
 <template>
   <el-container class="page">
-    <el-header class="head">
+    <el-header>
       <div class="el-icon"/>
       <p>{{ $route.name }}</p>
       <div class="el-icon"/>
     </el-header>
     <div class="header"></div>
-    <el-main class="main">
-      <router-view class="page"></router-view>
+    <el-main>
+      <router-view class="page"/>
     </el-main>
     <div class="footer"></div>
     <el-footer>
