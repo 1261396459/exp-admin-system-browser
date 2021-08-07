@@ -59,7 +59,7 @@ export default {
   },
   
   submitApply(id, lab, time){
-    return Client.post(api+'/upd-lab-number',{
+    return Client.post(api+'/add-application',{
       id, 
       lab, 
       time
