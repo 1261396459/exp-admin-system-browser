@@ -50,6 +50,26 @@ const routes = [
     path: '/adminer/lab-change',
     name: '修改实验室信息',
     component: () => import('@/views/Adminer/AlertLab.vue')
+  },
+  {
+    path: '/teacher',
+    component: () => import('@/views/TeacherHome.vue'),
+    children: [
+      {
+        path: "",
+        redirect: "/teacher/big"
+      },
+      {
+        path: "big",
+        name: '我的实验课',
+        component: () => import('@/views/Teacher/Big.vue')
+      },
+      {
+        path: "apply",
+        name: '我的申请',
+        component: () => import('@/views/Teacher/Apply.vue')
+      },
+    ]
   }
 ]
 
