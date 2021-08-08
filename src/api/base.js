@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiHost = "http://127.0.0.1:3000";
+const apiHost = "http://120.79.168.124:40000";
 
 export default axios.create({
   baseURL: apiHost,
